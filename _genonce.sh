@@ -16,7 +16,7 @@ echo "$txoption"
 
 publisher=$input_cache_path/$publisher_jar
 if test -f "$publisher"; then
-	java -jar $publisher -ig . $txoption $*
+	java -Xms512m -Xmx8g -jar $publisher -ig . $txoption $*
 
 else
 	publisher=../$publisher_jar
